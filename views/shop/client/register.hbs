@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransitions jPanelMenu">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{{title}}</title>
+	{{>shopHead}}
+</head>
+<body class="boxed">
+<div id="wrapper">
+	{{>shopHeader}}
+	<!-- Titlebar
+================================================== -->
+	<section class="parallax-titlebar fullwidth-element">
+		<img src="/public/images/shop/titlebar_bg_01.jpg">
+		<div class="parallax-overlay"></div>
+		<div class="parallax-content">
+			<h2><i class="booen_icon booen_icon-user7"></i>会员中心 <span>Member Center</span></h2>
+			<nav id="breadcrumbs">
+				<ul>
+					<li><i class="booen_icon booen_icon-location"></i>您的位置：<a href="index.php">首页</a></li>
+					<li><i class="booen_icon booen_icon-arrow-right5"></i><a href="user.php">会员中心</a></li>
+					<li><i class="booen_icon booen_icon-arrow-right5"></i>注册</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<div class="main">
+		<div class="container mainAll">	
+			<div class="four columns">
+				<div class="picMarquee-top ">
+					<div class="hd">
+						<a class="next"><i class="booen_icon booen_icon-arrow-down5"></i></a>
+						<a class="prev"><i class="booen_icon booen_icon-arrow-up5"></i></a>
+					</div>
+					<div class="bd">
+						<ul class="picList">
+							<li>
+								<a href="/mall.php?MallAction=display&Product_Id=<!--{$list.productId}-->" target="_blank">
+									<div class="pic">
+										<img alt="" src="/public/images/shop/shop_item_01.jpg">
+									</div>
+									<div class="title">名字</div>
+								</a>
+							</li>
+							<li>
+								<a href="/mall.php?MallAction=display&Product_Id=<!--{$list.productId}-->" target="_blank">
+									<div class="pic">
+										<img alt="" src="/public/images/shop/shop_item_01.jpg">
+									</div>
+									<div class="title">名字</div>
+								</a>
+							</li>
+							<li>
+								<a href="/mall.php?MallAction=display&Product_Id=<!--{$list.productId}-->" target="_blank">
+									<div class="pic">
+										<img alt="" src="/public/images/shop/shop_item_01.jpg">
+									</div>
+									<div class="title">名字</div>
+								</a>
+							</li>
+							<li>
+								<a href="/mall.php?MallAction=display&Product_Id=<!--{$list.productId}-->" target="_blank">
+									<div class="pic">
+										<img alt="" src="/public/images/shop/shop_item_01.jpg">
+									</div>
+									<div class="title">名字</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+
+			<script type="text/javascript">
+				jQuery(".picMarquee-top").slide({
+					mainCell:".bd ul",
+					autoPlay:true,
+					effect:"topMarquee",
+					vis:2,
+					interTime:50
+				});
+			</script>
+			<form method="post" class="twelve columns">
+				<table class="loginTable" border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<th colspan="2"><span class="booen_icon booen_icon-user-plus"></span> 会员注册</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><span class="booen_icon booen_icon-user"></span> 用户名：</th>
+							<td>
+								<input type="text" name="username" value="" class="inputName" />
+								<span class="tips">（由5至36数字和字母组成）<a href="/shop/login">已注册？点击登陆&gt;</a></span>								
+								<span class="js_hidden _account_noti">用户名格式有误，请检查。</span>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="booen_icon booen_icon-key"></span> 密码：</th>
+							<td>
+								<input type="password" name="password" value="" class="inputPassword" />
+								<span class="tips">（由6至36数字和字母组成，请注意区分大小写）</span>
+								<span class="js_hidden _password_noti">密码应在6～36位之间。</span>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="booen_icon booen_icon-key"></span> 密码验证：</th>
+							<td>
+								<input type="password" name="password_check" value="" class="inputPassword" />
+								<span class="tips">（请再输入一次密码）</span>
+								<span class="js_hidden _password_check_noti">密码应在6～36位之间。</span>
+								<span class="js_hidden _password_notmatch_noti">验证密码与原密码不同一致。</span>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="booen_icon booen_icon-envelop5"></span> E-mail：</th>
+							<td>
+								<input type="text" name="email" value="" class="inputMail" />
+								<span class="tips">（请填写常用的邮箱地址）</span>
+								<span class="js_hidden _email_noti">邮箱格式有误，请检查。</span>
+							</td>
+						</tr>
+						<tr>
+							<th><span class="booen_icon booen_icon-shield-check"></span> 验证码：</th>
+							<td class="_vali_code">
+								<input name="valicode" type="text" value="" class="inputValiCode" /> 
+								<img src="/valiCode.php" id="valiCode" class="valiCodeImg" />
+								<span class="tips">（<a onclick="jQuery('#valiCode').getValiCode()">看不清楚？点击换一幅！</a>）</span> 
+								<script type="text/javascript">jQuery('#valiCode').getValiCode();</script>
+								<span class="js_hidden _valicode_noti">验证码位数不对。</span>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th colspan="2">
+								<input type="submit" name="submit" class="loginButton" value="提交" /> 
+								<span class="tips error"><!--{$status_brief}--></span>
+							</th>
+						</tr>
+					</tfoot>
+				</table>
+			</form>
+			<div class="clearfloat"></div>
+		</div>
+	</div>
+	{{>shopFooter}}
+</div>
+</body>

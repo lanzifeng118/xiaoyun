@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransitions jPanelMenu">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{{title}}-首页</title>
+	{{>shopHead}}
+</head>
+
+<body class="boxed">
+<div id="wrapper">
+	{{>shopHeader}}
+<!-- banner
+================================================== -->	
+	<div class="container fullwidth-element">
+		<div id="banner" class="banner">
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li><img src="/public/images/shop/slider.jpg" /></li>
+					<li><img src="/public/images/shop/slider2.jpg" /></li>
+					<li><img src="/public/images/shop/slider3.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var sliderLength = $(".banner .bd ul li").length;
+		for (var i = 1; i <= sliderLength; i++) {
+			$(".banner .hd ul").append("<li>"+i+"</li>");
+		}			
+		jQuery(".banner").slide({
+			mainCell:".bd ul",
+			effect:"leftLoop",
+			autoPlay:false,
+			delayTime:1000,
+			interTime:3000,
+		});
+	</script>
+
+<!-- Featured
+================================================== -->
+	<div class="container">
+
+		<div class="one-third column">
+			<a href="" class="img-caption">
+				<figure>
+					<img src="/public/images/shop/featured_img_1.jpg" alt="">
+					<figcaption>
+						<h3>男装T恤</h3>
+						<span>Big Discount</span>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="one-third column">
+			<a href="" class="img-caption">
+				<figure>
+					<img src="/public/images/shop/featured_img_2.jpg" alt="">
+					<figcaption>
+						<h3>运动鞋</h3>
+						<span>Big Discount</span>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<div class="one-third column">
+			<a href="" class="img-caption">
+				<figure>
+					<img src="/public/images/shop/featured_img_3.jpg" alt="">
+					<figcaption>
+						<h3>冬天夹克</h3>
+						<span>Big Discount</span>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+
+	</div>
+	<div class="clearfix"></div>
+<!-- New Arrivals
+================================================== -->
+	<div class="container">
+		<!-- Headline -->
+		<div class="sixteen columns">
+			<h3 class="headline">新品到货</h3>
+			<span class="line margin-bottom-0"></span>
+			<a href=""><p class="line-more">更多</p></a>
+		</div>
+		<!-- Products -->
+		<div class="showbiz">
+			<div class="overflowholder" style="height: 474px;">
+				<ul>
+					<!-- Product #1 -->
+					<li>
+						<figure class="product">
+							<div class="mediaholder">
+								<a href="">
+									<img alt="" src="/public/images/shop/shop_item_01.jpg">
+									<div class="cover">
+										<img alt="" src="/public/images/shop/shop_item_01.jpg">
+									</div>
+								</a>
+								<a href="" class="product-button"><i class="booen_icon booen_icon-search"></i>查看详情</a>
+							</div>
+							<a href="">
+								<section>
+									<h5>棕色短裙</h5>
+									<span class="product-price-discount">$499.00<i>$399.00</i></span>
+								</section>
+							</a>
+						</figure>
+					</li>
+					<!-- Product #2 -->
+					<li>
+						<figure class="product">
+							<div class="mediaholder">
+								<a href="">
+									<img alt="" src="/public/images/shop/shop_item_02.jpg">
+									<div class="cover">
+										<img alt="" src="/public/images/shop/shop_item_02.jpg">
+									</div>
+								</a>
+								<a href="" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+							<a href="">
+								<section>
+									<span class="product-price">$99.00</span>
+								</section>
+							</a>
+						</figure>
+					</li>
+					<!-- Product #3 -->
+					<li>
+						<figure class="product">
+							<div class="product-discount">SALE</div>
+							<div class="mediaholder">
+								<a href="">
+									<img alt="" src="/public/images/shop/shop_item_03.jpg">
+									<div class="cover">
+										<img alt="" src="/public/images/shop/shop_item_03_hover.jpg">
+									</div>
+								</a>
+								<a href="" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+							<a href="">
+								<section>
+									<span class="product-price-discount">$499.00<i>$399.00</i></span>
+								</section>
+							</a>
+						</figure>
+					</li>
+					<!-- Product #4 -->
+					<li>
+						<figure class="product">
+							<div class="mediaholder">
+								<a href="">
+									<img alt="" src="/public/images/shop/shop_item_04.jpg">
+									<div class="cover">
+										<img alt="" src="/public/images/shop/shop_item_04_hover.jpg">
+									</div>
+								</a>
+								<a href="" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+							</div>
+							<a href="">
+								<section>
+									<h5>Vintage Stripe Jumper</h5>
+									<span class="product-price">$49.00</span>
+								</section>
+							</a>
+						</figure>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+<!-- Parallax Banner
+================================================== -->
+	<div class="parallax-banner fullwidth-element">
+		<img src="/public/images/shop/parallax.jpg">
+		<div class="parallax-overlay"></div>
+		<div class="parallax-title">End of season sale <span>Up to 35% off</span></div>
+	</div>
+<!-- Product Lists
+================================================== -->
+	<div class="container margin-bottom-25">
+
+		<!-- Best Sellers -->
+		<div class="one-third column "">
+			<div class="product-lists">
+				<!-- Headline -->
+				<h3 class="headline">畅销产品</h3>
+				<span class="line margin-bottom-0"></span>
+				<a href=""><p class="line-more">更多</p></a>
+				<div class="clearfix"></div>
+				<ul class="product-list">
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_01.jpg" alt="">
+						<div class="product-list-desc">书包 <i>$59.00</i></div>
+					</a></li>
+
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_02.jpg" alt="">
+						<div class="product-list-desc">Long Sleeve衬衫<i>$29.00</i></div>
+					</a></li>
+
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_03.jpg" alt="">
+						<div class="product-list-desc">Tommy HilfigerT恤 <i>$89.00</i></div>
+					</a></li>
+
+					<li><div class="clearfix"></div></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- Top Rated -->
+		<div class="one-third column product-lists">
+			<div class="product-lists">
+				<!-- Headline -->
+				<h3 class="headline">五星产品</h3>
+				<span class="line margin-bottom-0"></span>
+				<a href=""><p class="line-more">更多</p></a>
+				<div class="clearfix"></div>
+				<ul class="product-list top-rated">
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_04.jpg" alt="">
+						<div class="product-list-desc with-rating">Brogue Boots in Leather <i>$99.00</i>
+							<div class="rating five-stars">
+								<div class="star-rating">
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+								</div>
+							</div>
+						</div>
+					</a></li>
+
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_05.jpg" alt="">
+						<div class="product-list-desc with-rating">Slim Jeans With Blue Tint <i>$79.00</i>
+							<div class="rating five-stars">
+								<div class="star-rating">
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+								</div>
+							</div>
+						</div>
+					</a></li>
+
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_06.jpg" alt="">
+						<div class="product-list-desc with-rating">New Look Fairisle Scarf <i>$19.00</i>
+							<div class="rating five-stars">
+								<div class="star-rating">
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+									<i class="booen_icon booen_icon-star-full2"></i>
+								</div>
+							</div>
+						</div>
+					</a></li>
+					<li><div class="clearfix"></div></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Weekly Sales -->
+		<div class="one-third column">
+			<div class="product-lists">
+				<!-- Headline -->
+				<h3 class="headline">促销商品</h3>
+				<span class="line margin-bottom-0"></span>
+				<div class="clearfix"></div>
+				<ul class="product-list discount">
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_07.jpg" alt="">
+						<div class="product-list-desc">Short Sleeve Polo Shirt <i>$29.00<b>$19.00</b></i></div>
+					</a></li>
+
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_08.jpg" alt="">
+						<div class="product-list-desc">Long Sleeve Shirt <i>$99.00<b>$79.00</b></i></div>
+					</a></li>
+
+					<li><a href="">
+						<img src="/public/images/shop/small_product_list_09.jpg" alt="">
+						<div class="product-list-desc">Tommy Hilfiger Shirt Beat <i>$499.00<b>$399.00</b></i></div>
+					</a></li>
+
+					<li><div class="clearfix"></div></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class="clearfix"></div>
+<!-- Latest Articles
+================================================== -->
+	<div class="container">
+
+		<!-- Headline -->
+		<div class="sixteen columns">
+			<h3 class="headline">最新动态</h3>
+			<span class="line margin-bottom-30"></span>
+		</div>
+
+		<!-- Post #1 -->
+		<div class="four columns">
+			<article class="from-the-blog">
+				<figure class="from-the-blog-image">
+					<a href=""><img src="/public/images/shop/from_the_blog_03.jpg" alt=""></a>
+					<div class="hover-icon"><i class="booen_icon booen_icon-plus2"></i></div>
+				</figure>
+
+				<section class="from-the-blog-content">
+					<a href=""><h5>中秋节促销活动</h5></a>
+					<i>May 31, 2014</i>
+					<span>中秋节促销活动中秋节促销活动中秋节促销活动中秋节促销活动中秋节促销活动中秋节促销活动中秋节促销活动</span>
+					<a href="" class="button gray">Read More</a>
+				</section>
+			</article>
+		</div>
+
+		<!-- Post #2 -->
+		<div class="four columns">
+			<article class="from-the-blog">
+				<figure class="from-the-blog-image">
+					<a href=""><img src="/public/images/shop/from_the_blog_02.jpg" alt=""></a>
+					<div class="hover-icon"><i class="booen_icon booen_icon-plus2"></i></div>
+				</figure>
+
+				<section class="from-the-blog-content">
+					<a href=""><h5>How To Read The Symbols on Your Clothing Tags</h5></a>
+					<i>By Vasterad on May 16, 2014</i>
+					<span>Morbi quis magna nec lacus nunc eratu pharetra lorem sed sapien velit adipiscing. </span>
+					<a href="" class="button gray">Read More</a>
+				</section>
+			</article>
+		</div>
+
+		<!-- Post #3 -->
+		<div class="four columns">
+			<article class="from-the-blog">
+				<figure class="from-the-blog-image">
+					<a href=""><img src="/public/images/shop/from_the_blog_03.jpg" alt=""></a>
+					<div class="hover-icon"><i class="booen_icon booen_icon-plus2"></i></div>
+				</figure>
+
+				<section class="from-the-blog-content">
+					<a href=""><h5>Online Shopping Hit New Highs on Mobile Sales</h5></a>
+					<i>By Vasterad on May 10, 2014</i>
+					<span>Donec non egestas nisl. Aliquam tincidunt sem sed nisl dictum. Fusce gravida arius gravida.</span>
+					<a href="" class="button gray">Read More</a>
+				</section>
+			</article>
+		</div>
+
+		<!-- Post #4 -->
+		<div class="four columns">
+			<article class="from-the-blog">
+
+				<figure class="from-the-blog-image">
+					<a href=""><img src="/public/images/shop/from_the_blog_04.jpg" alt=""></a>
+					<div class="hover-icon"><i class="booen_icon booen_icon-plus2"></i></div>
+				</figure>
+
+				<section class="from-the-blog-content">
+					<a href=""><h5>How to Choose Size - Does Your Shirt Fit Properly?</h5></a>
+					<i>By Vasterad on April 20, 2014</i>
+					<span>Nullam eget ante cursus, dignissim velit sit amet, tempus massa bibendum venenatis.</span>
+					<a href="" class="button gray">Read More</a>
+				</section>
+
+			</article>
+		</div>
+
+	</div>
+
+	<div class="margin-top-50"></div>
+	{{>shopFooter}}
+
+</body>
+</html>

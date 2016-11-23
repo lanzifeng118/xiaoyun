@@ -1,0 +1,97 @@
+<!-- Top Bar
+================================================== -->
+	<div id="top-bar">
+		<div class="container">
+			<!-- Top Bar Menu -->
+			<div class="ten columns">
+				<ul class="top-bar-menu">
+					<li><i class="booen_icon booen_icon-phone2"></i> (564) 123 4567</li>
+					<li><i class="booen_icon booen_icon-envelop5"></i>mail@example.com</li>
+				</ul>
+			</div>
+
+			<!-- Social Icons -->
+			<div class="six columns">
+				<ul class="headerUser">
+					{{#if authenticated}}
+						<li><a class="greenText">欢迎您，{{username}}</a></li>
+					{{else}}
+						<li><a class="greenText" href="/shop/login">亲，请登录</a></li>
+						<li><a href="/shop/register">免费注册</a></li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+<!-- Header
+================================================== -->
+	<div class="container">
+
+		<!-- Logo -->
+		<div class="four columns">
+			<div id="logo">
+				<a href=""><img src="/public/images/shop/logo.png"></a>
+			</div>
+		</div>
+			
+		<!-- Shopping Cart -->
+		<div class="twelve columns">
+
+			<div id="cart">
+
+				<!-- Button -->
+				<div class="cart-btn">
+					<a href="" class="button adc"><i class="booen_icon booen_icon-cart5"></i>×12</a>
+				</div>
+
+			</div>
+			<!-- Search -->
+			<nav class="top-search">
+				<form action="" method="get">
+					<button><i class="booen_icon booen_icon-search"></i></button>
+					<input class="search-field" type="text" placeholder="搜索" value="">
+				</form>
+			</nav>
+		</div>
+	</div>
+<!-- Navigation
+================================================== -->	
+	<div class="container">
+		<div class="sixteen columns">
+			<nav id="navigation">
+				<ul class="menu" id="responsive">
+					<li><a href="/" class="current"><i class="booen_icon booen_icon-home5"></i></a></li>
+					<li class="dropdown nLi">
+						<a href="" class="arrow">商品分类<i class="booen_icon booen_icon-arrow-down5"></i></a>
+						<ul class="sub" style="display: none;">
+							<li><a href="">Shop With Sidebar</a></li>
+							<li><a href="">Shop Full Width</a></li>
+							<li><a href="">Checkout Pages</a></li>
+							<li><a href="">Categories Grid</a></li>
+							<li><a href="">Single Product Page</a></li>
+							<li><a href="">Variable Product Page</a></li>
+							<li><a href="">Wishlist Page</a></li>
+							<li><a href="">Shopping Cart</a></li>
+						</ul>
+					</li>
+					<li><a href="/shop">商城首页</a></li>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">新闻动态</a></li>
+					<li><a href="">个人中心</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<script id="jsID" type="text/javascript">
+		jQuery("#navigation").slide({ 
+			type:"menu", 
+			titCell:".nLi", 
+			targetCell:".sub",
+			effect:"slideDown",
+			delayTime:300,
+			triggerTime:0,
+			returnDefault:true,
+		});
+	</script>
